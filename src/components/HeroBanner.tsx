@@ -1,6 +1,6 @@
 function HeroBanner() {
     return (
-        <div className="container flex h-screen items-center justify-center">
+        <div className="content-container flex h-screen items-center justify-center">
             <div className="flex flex-col gap-2">
                 <p className="outlined-text text-center text-5xl font-black uppercase text-transparent lg:text-9xl">
                     Dark Mode

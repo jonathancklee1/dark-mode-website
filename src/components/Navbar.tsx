@@ -1,21 +1,32 @@
+import { useState } from 'react'
+import DropdownMenu from './DropdownMenu'
 import Hamburger from './svg/Hamburger'
 function Navbar() {
+    const [isOpen, setIsOpen] = useState(false)
     return (
-        <div className="container sticky top-0 flex items-center justify-center text-2xl">
-            {/* Mobile */}
-            <div className="absolute top-10 w-full cursor-pointer px-6 md:hidden">
-                <Hamburger />
+        <>
+            <div className="relative top-0 flex flex-col items-center justify-center shadow-2xl">
+                {/* Mobile */}
+                <div className="content-container absolute top-0 z-50 w-full bg-background-color py-10 md:hidden ">
+                    <div
+                        className="w-fit cursor-pointer"
+                        onClick={() => setIsOpen(!isOpen)}
+                    >
+                        <Hamburger />
+                    </div>
+                </div>
+                {/* Desktop */}
+                <div className="absolute top-0 hidden w-full py-10 text-2xl shadow-2xl md:block">
+                    <ul className="flex justify-center gap-10">
+                        <li className="cursor-pointer">History </li>
+                        <li className="cursor-pointer">Benefits</li>
+                        <li className="cursor-pointer">Implementing</li>
+                        <li className="cursor-pointer">Examples</li>
+                    </ul>
+                </div>
+                <DropdownMenu isOpen={isOpen} />
             </div>
-            {/* Desktop */}
-            <div className="absolute top-10 hidden md:block">
-                <ul className="flex justify-center gap-10">
-                    <li className="cursor-pointer">History </li>
-                    <li className="cursor-pointer">Benefits</li>
-                    <li className="cursor-pointer">Implementing</li>
-                    <li className="cursor-pointer">Examples</li>
-                </ul>
-            </div>
-        </div>
+        </>
     )
 }
 

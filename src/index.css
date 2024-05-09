@@ -18,7 +18,7 @@
     main {
         @apply bg-background-color text-text-color;
     }
-    .container {
+    .content-container {
         @apply mx-auto max-w-[1440px] px-6 lg:px-12;
     }
 
