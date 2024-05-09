@@ -12,13 +12,17 @@
     *,
     *:before,
     *:after {
-        @apply box-border m-0 p-0;
+        @apply m-0 box-border p-0;
     }
 
     main {
         @apply bg-background-color text-text-color;
     }
     .container {
-        @apply max-w-[1440px] mx-auto;
+        @apply mx-auto max-w-[1440px] px-6 lg:px-12;
+    }
+
+    .outlined-text {
+        -webkit-text-stroke: 1px var(--text-color);
     }
 }

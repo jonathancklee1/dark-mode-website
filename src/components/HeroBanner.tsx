@@ -1,7 +1,17 @@
 function HeroBanner() {
     return (
         <div className="container flex h-screen items-center justify-center">
-            <h1 className="text-5xl font-black uppercase">Dark Mode</h1>
+            <div className="flex flex-col gap-2">
+                <p className="outlined-text text-center text-5xl font-black uppercase text-transparent lg:text-9xl">
+                    Dark Mode
+                </p>
+                <h1 className="text-center text-5xl font-black uppercase lg:text-9xl">
+                    Dark Mode
+                </h1>
+                <p className="outlined-text text-center text-5xl font-black uppercase text-transparent lg:text-9xl">
+                    Dark Mode
+                </p>
+            </div>
         </div>
     )
 }
