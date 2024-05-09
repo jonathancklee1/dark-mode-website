@@ -19,7 +19,7 @@
         @apply bg-background-color text-text-color;
     }
     .content-container {
-        @apply mx-auto max-w-[1440px] px-6 lg:px-12;
+        @apply mx-auto max-w-[1440px] px-6 py-8 lg:px-12 lg:py-12;
     }
 
     .outlined-text {
