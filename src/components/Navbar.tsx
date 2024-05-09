@@ -16,7 +16,7 @@ function Navbar() {
                     </div>
                 </div>
                 {/* Desktop */}
-                <div className="absolute top-0 hidden w-full py-10 text-2xl shadow-2xl md:block">
+                <div className="absolute top-0 z-50 hidden w-full py-8 text-2xl shadow-2xl md:block">
                     <ul className="flex justify-center gap-10">
                         <li className="cursor-pointer">History </li>
                         <li className="cursor-pointer">Benefits</li>
