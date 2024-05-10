@@ -4,31 +4,37 @@ function Benefits() {
     const benefitsData = [
         {
             benefit: 'Benefit 1',
+            icon: 'eye',
             description:
                 'djoasjo djos aodjos jaoo josadj osjoajoopajs ojdo jaosdj osaj oj ojo sjao jo oajso jodajs oj aso j',
         },
         {
             benefit: 'Benefit 2',
+            icon: 'access',
             description:
                 'djoasjo djos aodjos jaoo josadj osjoajoopajs ojdo jaosdj osaj oj ojo sjao jo oajso jodajs oj aso j',
         },
         {
             benefit: 'Benefit 3',
+            icon: 'battery',
             description:
                 'djoasjo djos aodjos jaoo josadj osjoajoopajs ojdo jaosdj osaj oj ojo sjao jo oajso jodajs oj aso j',
         },
         {
             benefit: 'Benefit 4',
+            icon: 'bed',
             description:
                 'djoasjo djos aodjos jaoo josadj osjoajoopajs ojdo jaosdj osaj oj ojo sjao jo oajso jodajs oj aso j',
         },
         {
             benefit: 'Benefit 5',
+            icon: 'arrow-eye',
             description:
                 'djoasjo djos aodjos jaoo josadj osjoajoopajs ojdo jaosdj osaj oj ojo sjao jo oajso jodajs oj aso j',
         },
         {
             benefit: 'Benefit 6',
+            icon: 'palette',
             description:
                 'djoasjo djos aodjos jaoo josadj osjoajoopajs ojdo jaosdj osaj oj ojo sjao jo oajso jodajs oj aso j',
         },

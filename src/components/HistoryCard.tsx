@@ -26,7 +26,6 @@ function HistoryCard({ data, index }: HistoryCardProps) {
         case 5:
             gridRowStart = 'md:row-start-6'
             break
-
         default:
             break
     }

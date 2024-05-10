@@ -7,6 +7,7 @@ export default {
                 'background-color': 'var(--background-color)',
                 'text-color': 'var(--text-color)',
                 'card-color': 'var(--card-color)',
+                'accent-color': 'var(--accent-color)',
             },
             height: {
                 'header-height': 'var(--header-height)',
