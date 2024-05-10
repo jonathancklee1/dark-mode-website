@@ -27,4 +27,7 @@
     .outlined-text {
         -webkit-text-stroke: 1px var(--text-color);
     }
+    article > p {
+        @apply !mb-4;
+    }
 }
