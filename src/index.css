@@ -6,6 +6,7 @@
     :root {
         --background-color: #1e1e1e;
         --text-color: #fff;
+        --card-color: #3d3d3d;
         --header-height: 80px;
     }
 
