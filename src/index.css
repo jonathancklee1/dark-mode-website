@@ -2,13 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer {
-    :root {
+@layer base {
+    main[data-theme='dark'] {
         --background-color: #1e1e1e;
-        --text-color: #fff;
+        --text-color: #e2e2e2;
         --card-color: #3d3d3d;
-        --accent-color: #61ff00;
-        --header-height: 80px;
+    }
+    main[data-theme='light'] {
+        --background-color: #d8d8d8;
+        --text-color: #1e1e1e;
+        --card-color: #c2c2c2;
     }
 
     *,
@@ -18,7 +21,9 @@
     }
 
     main {
-        @apply bg-background-color text-text-color;
+        --accent-color: #61ff00;
+        --header-height: 80px;
+        @apply bg-background-color text-text-color transition-all duration-500 ease-in-out;
     }
     .content-container {
         @apply mx-auto max-w-[1440px] px-6 py-8 lg:px-12 lg:py-12;

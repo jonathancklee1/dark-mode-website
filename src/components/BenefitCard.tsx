@@ -4,7 +4,16 @@ import Bed from '../assets/bed-solid.svg?react'
 import Eye from '../assets/eye-regular.svg?react'
 import Palette from '../assets/palette-solid.svg?react'
 import Access from '../assets/universal-access-solid.svg?react'
-function BenefitCard({ data }) {
+
+interface BenefitCardProps {
+    data: {
+        icon: string
+        benefit: string
+        description: string
+    }
+}
+
+function BenefitCard({ data }: BenefitCardProps) {
     function getIcon(icon: string) {
         switch (icon) {
             case 'eye':
@@ -24,7 +33,7 @@ function BenefitCard({ data }) {
         }
     }
     return (
-        <div className="[&_svg]:hover:fill-accent-color flex flex-col items-center justify-center gap-4 rounded-3xl px-4 py-8 opacity-50 transition-all duration-500 ease-in-out hover:bg-card-color hover:opacity-100 [&_svg]:fill-white">
+        <div className="flex flex-col items-center justify-center gap-4 rounded-3xl px-4 py-8 opacity-50 transition-all duration-500 ease-in-out hover:bg-card-color hover:opacity-100 [&_svg]:fill-text-color [&_svg]:hover:fill-accent-color">
             {getIcon(data.icon)}
             <p className="text-center text-2xl font-black">{data.benefit}</p>
             <p className="text-lg">{data.description}</p>

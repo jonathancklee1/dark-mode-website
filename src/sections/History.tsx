@@ -16,8 +16,8 @@ function History() {
                 <div className="flex flex-col items-center justify-center gap-4 md:absolute md:left-1/2 md:h-full md:-translate-x-1/2">
                     <p className="text-center font-bold">1987</p>
                     <div className="relative h-full ">
-                        <div className=" mx-auto h-full w-2 rounded-lg bg-white "></div>
-                        <div className="absolute left-1/2 top-0 size-10 -translate-x-1/2 rounded-full bg-white"></div>
+                        <div className=" mx-auto h-full w-2 rounded-lg bg-text-color "></div>
+                        <div className="absolute left-1/2 top-0 size-10 -translate-x-1/2 rounded-full bg-text-color"></div>
                     </div>
                     <p className="text-center font-bold">Present Day</p>
                 </div>
