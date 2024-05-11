@@ -24,7 +24,7 @@ function GalleryMedia({ image, index }: GalleryMediaProps) {
                     loading="lazy"
                 />
             </picture>
-            <div className="absolute inset-0 flex translate-y-full flex-col items-center justify-center gap-4 bg-black p-8 opacity-60 transition-all duration-500 ease-in-out group-hover:translate-y-0">
+            <div className="absolute inset-0 flex translate-y-full flex-col items-center justify-center gap-4 bg-black p-8 text-white opacity-60 transition-all duration-500 ease-in-out group-hover:translate-y-0">
                 <p className="text-center text-3xl font-bold md:text-5xl">
                     {image.siteName}
                 </p>
