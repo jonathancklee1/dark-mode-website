@@ -3,40 +3,41 @@ import BenefitCard from '../components/BenefitCard'
 function Benefits() {
     const benefitsData = [
         {
-            benefit: 'Benefit 1',
+            benefit: 'Reduced Eye Strain',
             icon: 'eye',
             description:
-                'djoasjo djos aodjos jaoo josadj osjoajoopajs ojdo jaosdj osaj oj ojo sjao jo oajso jodajs oj aso j',
+                'Dark mode can decrease eye strain, especially in low-light conditions, making it easier to read text on screens',
         },
         {
-            benefit: 'Benefit 2',
+            benefit: 'Enhanced Accessibility',
             icon: 'access',
             description:
-                'djoasjo djos aodjos jaoo josadj osjoajoopajs ojdo jaosdj osaj oj ojo sjao jo oajso jodajs oj aso j',
+                'Individuals with light sensitivity or certain visual impairments may find dark mode more comfortable to use',
         },
         {
-            benefit: 'Benefit 3',
-            icon: 'battery',
-            description:
-                'djoasjo djos aodjos jaoo josadj osjoajoopajs ojdo jaosdj osaj oj ojo sjao jo oajso jodajs oj aso j',
-        },
-        {
-            benefit: 'Benefit 4',
-            icon: 'bed',
-            description:
-                'djoasjo djos aodjos jaoo josadj osjoajoopajs ojdo jaosdj osaj oj ojo sjao jo oajso jodajs oj aso j',
-        },
-        {
-            benefit: 'Benefit 5',
-            icon: 'arrow-eye',
-            description:
-                'djoasjo djos aodjos jaoo josadj osjoajoopajs ojdo jaosdj osaj oj ojo sjao jo oajso jodajs oj aso j',
-        },
-        {
-            benefit: 'Benefit 6',
+            benefit: 'Aesthetic Appeal',
             icon: 'palette',
             description:
-                'djoasjo djos aodjos jaoo josadj osjoajoopajs ojdo jaosdj osaj oj ojo sjao jo oajso jodajs oj aso j',
+                'Many users find dark mode aesthetically pleasing, associating dark colors with luxury and elegance',
+        },
+        {
+            benefit: 'Improved Sleep Quality',
+            icon: 'bed',
+            description:
+                'By decreasing blue light exposure, dark mode may help improve sleep quality if used during the evening or before bedtime',
+        },
+        {
+            benefit: 'Increased Focus',
+            icon: 'arrow-eye',
+            description:
+                'The reduction or elimination of screen flickering and higher contrast in dark mode can potentially increase focus and reduce distractions',
+        },
+
+        {
+            benefit: 'Battery Savings',
+            icon: 'battery',
+            description:
+                'On devices with OLED or AMOLED screens, dark mode can significantly reduce power consumption, leading to longer battery life',
         },
     ]
     return (

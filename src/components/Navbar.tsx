@@ -8,7 +8,7 @@ function Navbar() {
         <>
             <div className="transition-color fixed left-0 right-0 top-0 z-50 flex w-full flex-col items-center justify-center bg-background-color shadow-2xl">
                 {/* Mobile */}
-                <div className="content-container absolute top-0 z-50 flex w-full items-center justify-between bg-background-color py-10 transition-all duration-500 ease-in-out md:hidden">
+                <div className="content-container absolute top-0 z-50 flex w-full items-center justify-between bg-background-color py-6 transition-all duration-500 ease-in-out md:hidden">
                     <div
                         className="w-fit cursor-pointer [&>svg]:stroke-text-color"
                         onClick={() => setIsOpen(!isOpen)}

@@ -33,7 +33,7 @@ function BenefitCard({ data }: BenefitCardProps) {
         }
     }
     return (
-        <div className="flex cursor-pointer flex-col items-center justify-center gap-4 rounded-3xl px-4 py-8 opacity-50 transition-all duration-500 ease-in-out hover:bg-card-color hover:opacity-100 [&_svg]:fill-text-color [&_svg]:hover:fill-accent-color">
+        <div className="flex cursor-pointer flex-col items-center justify-center gap-4 rounded-3xl px-4 py-8 text-text-color opacity-50 transition-all duration-500  ease-in-out hover:bg-card-color hover:opacity-100 [&_svg]:fill-text-color [&_svg]:hover:fill-accent-color">
             {getIcon(data.icon)}
             <p className="text-center text-2xl font-black">{data.benefit}</p>
             <p className="text-lg">{data.description}</p>
