@@ -20,7 +20,7 @@ function GalleryMedia({ image, index }: GalleryMediaProps) {
                 <img
                     src={image.img.src}
                     alt={image.img.alt}
-                    className="aspect-square h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                    className="aspect-square h-full w-full object-contain transition-transform duration-500 ease-in-out group-hover:scale-110"
                     loading="lazy"
                 />
             </picture>

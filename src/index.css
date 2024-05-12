@@ -45,10 +45,10 @@
         --accent-color: #61ff00;
     }
     main[data-theme='light'] {
-        --background-color: #d8d8d8;
+        --background-color: #e7e7e7;
         --text-color: #1e1e1e;
-        --card-color: #c2c2c2;
-        --accent-color: #4dc900;
+        --card-color: #dedede;
+        --accent-color: #1f4d00;
     }
 
     *,

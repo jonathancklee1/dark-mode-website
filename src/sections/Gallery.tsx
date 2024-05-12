@@ -1,49 +1,7 @@
 import GalleryMedia from '../components/GalleryMedia'
 import { forwardRef } from 'react'
-
+import { galleryData } from '../data/galleryData'
 const Gallery = forwardRef(function Gallery(props, ref) {
-    const galleryData = [
-        {
-            siteName: 'VueJS',
-            link: '',
-            img: {
-                src: 'https://picsum.photos/1440/960',
-                alt: 'alt image',
-            },
-        },
-        {
-            siteName: '',
-            link: '',
-            img: {
-                src: 'https://picsum.photos/1080/960',
-                alt: 'alt image',
-            },
-        },
-        {
-            siteName: '',
-            link: '',
-            img: {
-                src: 'https://picsum.photos/1080/960',
-                alt: 'alt image',
-            },
-        },
-        {
-            siteName: '',
-            link: '',
-            img: {
-                src: 'https://picsum.photos/1080/960',
-                alt: 'alt image',
-            },
-        },
-        {
-            siteName: '',
-            link: '',
-            img: {
-                src: 'https://picsum.photos/1080/960',
-                alt: 'alt image',
-            },
-        },
-    ]
     return (
         <section
             ref={ref}
