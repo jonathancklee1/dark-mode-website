@@ -1,9 +1,11 @@
 interface HistoryCardProps {
     data: {
         year: string
+        description: string
     }
     index: number
 }
+import parse from 'html-react-parser'
 
 function HistoryCard({ data, index }: HistoryCardProps) {
     let gridRowStart = ''
@@ -34,11 +36,7 @@ function HistoryCard({ data, index }: HistoryCardProps) {
             className={`mx-auto flex flex-col gap-2 bg-background-color p-6 text-text-color shadow-2xl md:row-span-2 md:max-w-[400px]  ${index % 2 === 0 ? 'md:col-start-1' : 'md:col-start-2'} ${gridRowStart}`}
         >
             <p className="text-center text-xl font-black">{data.year}</p>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Dolorum cupiditate, porro non placeat dicta commodi.sd asd asd
-                asd s a sd
-            </p>
+            <p>{parse(data.description)}</p>
         </div>
     )
 }
