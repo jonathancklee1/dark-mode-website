@@ -1,8 +1,11 @@
-import React from 'react'
+import { forwardRef } from 'react'
 
-function Implementation() {
+const Implementation = forwardRef(function Implementation(props, ref) {
     return (
-        <article className="content-container flex-col md:flex md:min-h-screen">
+        <article
+            ref={ref}
+            className="content-container scroll-m-24 flex-col md:flex md:min-h-screen"
+        >
             <h2 className="text-center text-3xl font-bold">Implementation</h2>
             <p className="mt-7 text-center">
                 Do you want to implement dark mode on your own website? This is
@@ -15,6 +18,6 @@ function Implementation() {
             </p>
         </article>
     )
-}
+})
 
 export default Implementation

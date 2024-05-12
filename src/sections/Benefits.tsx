@@ -1,6 +1,7 @@
 import BenefitCard from '../components/BenefitCard'
+import { forwardRef } from 'react'
 
-function Benefits() {
+const Benefits = forwardRef(function Benefits(props, ref) {
     const benefitsData = [
         {
             benefit: 'Reduced Eye Strain',
@@ -41,7 +42,10 @@ function Benefits() {
         },
     ]
     return (
-        <section className="content-container flex-col md:flex md:min-h-screen">
+        <section
+            ref={ref}
+            className="content-container scroll-m-24 flex-col md:flex md:min-h-screen "
+        >
             <h2 className="text-center text-3xl font-bold">Benefits</h2>
             <div className="mt-20 grid grid-cols-1 gap-10 md:my-auto md:grid-cols-2 md:gap-y-16 lg:grid-cols-3">
                 {benefitsData.map((data) => {
@@ -50,6 +54,6 @@ function Benefits() {
             </div>
         </section>
     )
-}
+})
 
 export default Benefits

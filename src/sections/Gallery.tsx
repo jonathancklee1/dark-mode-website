@@ -1,6 +1,7 @@
 import GalleryMedia from '../components/GalleryMedia'
+import { forwardRef } from 'react'
 
-function Gallery() {
+const Gallery = forwardRef(function Gallery(props, ref) {
     const galleryData = [
         {
             siteName: 'VueJS',
@@ -44,7 +45,10 @@ function Gallery() {
         },
     ]
     return (
-        <section className="content-container flex-col md:flex md:min-h-screen">
+        <section
+            ref={ref}
+            className="content-container scroll-m-24 flex-col md:flex md:min-h-screen"
+        >
             <h2 className="text-center text-3xl font-bold">Gallery</h2>
             <div className="mt-20 grid grid-cols-1 gap-6 md:grid-cols-3 lg:my-auto lg:grid-cols-4 lg:gap-8">
                 {galleryData.map((image, index: number) => (
@@ -53,6 +57,6 @@ function Gallery() {
             </div>
         </section>
     )
-}
+})
 
 export default Gallery

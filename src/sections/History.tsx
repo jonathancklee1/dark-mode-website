@@ -1,6 +1,6 @@
+import { forwardRef } from 'react'
 import HistoryCard from '../components/HistoryCard'
-
-function History() {
+const History = forwardRef(function History(props, ref) {
     const historyData = [
         { year: '1987' },
         { year: '1999' },
@@ -10,7 +10,10 @@ function History() {
         { year: '2024' },
     ]
     return (
-        <section className="content-container min-h-screen">
+        <section
+            ref={ref}
+            className="content-container min-h-screen scroll-m-24"
+        >
             <h2 className="mb-20 text-center text-3xl font-bold ">History</h2>
             <div className="relative flex justify-center ">
                 {/* Timeline */}
@@ -36,6 +39,6 @@ function History() {
             </div>
         </section>
     )
-}
+})
 
 export default History

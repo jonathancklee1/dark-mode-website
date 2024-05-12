@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useRef, useState } from 'react'
 import HeroBanner from './components/HeroBanner'
 import Navbar from './components/Navbar'
 import Benefits from './sections/Benefits'
@@ -9,16 +9,27 @@ import Implementation from './sections/Implementation'
 export const ThemeContext = createContext(null)
 function App() {
     const [theme, setTheme] = useState('dark')
+    const historyRef = useRef(null)
+    const benefitsRef = useRef(null)
+    const implementationRef = useRef(null)
+    const galleryRef = useRef(null)
 
     return (
         <ThemeContext.Provider value={{ theme, setTheme }}>
             <main data-theme={theme}>
-                <Navbar />
+                <Navbar
+                    refList={[
+                        historyRef,
+                        benefitsRef,
+                        implementationRef,
+                        galleryRef,
+                    ]}
+                />
                 <HeroBanner />
-                <History />
-                <Benefits />
-                <Implementation />
-                <Gallery />
+                <History ref={historyRef} />
+                <Benefits ref={benefitsRef} />
+                <Implementation ref={implementationRef} />
+                <Gallery ref={galleryRef} />
             </main>
         </ThemeContext.Provider>
     )
