@@ -1,7 +1,7 @@
 import avatar from '../assets/images/profile-picture.jpg'
 function Footer() {
     return (
-        <footer className="content-container flex items-center justify-center gap-2 bg-background-color">
+        <footer className="content-container flex items-center justify-center gap-2 bg-background-color py-16">
             <p className="text-center">
                 A website made by&nbsp;
                 <a

@@ -72,8 +72,8 @@ export const ThemeContext = createContext(null)
                     Theme State
                 </h3>
                 <p className="mb-4">
-                    Add a theme state to your App component. For this website,
-                    we defaulted to dark. Make sure to import useState as well.
+                    Add a theme state to your App component. For this website, I
+                    had defaulted to dark. Make sure to import useState as well.
                 </p>
                 <SyntaxHighlighter
                     language="jsx"
@@ -114,9 +114,9 @@ export const ThemeContext = createContext(null)
                 <p className="mb-4">
                     Here is where you can take many routes to apply the theme to
                     your project. In this website, the theme state is provided
-                    as a data-attribute in the &lt;main&gt; element. This is
-                    done because, we can easily access the data-theme attribute
-                    using the
+                    as a data-attribute in the <code>&lt;main&gt;</code>{' '}
+                    element. This is done because, we can easily access the
+                    data-theme attribute using the
                     <code> main[data-theme='dark'] </code> selector.
                 </p>
                 <SyntaxHighlighter
@@ -139,12 +139,12 @@ export const ThemeContext = createContext(null)
                     colour variables in the index.css file
                 </h3>
                 <p className="mb-4">
-                    In the index.css file, declare your chosen colours as
-                    variables using the data-theme selector. If you are using
-                    Tailwind, remember to also declare the names in the
-                    tailwind.config.js file. Now you can use these styles as
-                    normal Tailwind classes e.g.{' '}
-                    <code>bg-background-color</code>.
+                    In the <code>index.css</code> file, declare your chosen
+                    colours as variables using the data-theme selector. If you
+                    are using Tailwind, remember to also declare the names in
+                    the <code>tailwind.config.js </code>
+                    file. Now you can use these styles as normal Tailwind
+                    classes e.g. <code>bg-background-color</code>.
                 </p>
                 <SyntaxHighlighter
                     language="css"
@@ -195,7 +195,7 @@ const SomeComponent = () => {
                 </SyntaxHighlighter>
             </div>
 
-            <p className="mb-6 mt-7 text-center">
+            <p className="mb-6 text-center">
                 <em>And there you go!</em>
                 <br />
                 <br />
@@ -207,7 +207,7 @@ const SomeComponent = () => {
                 <br />
                 <br />
                 <em>
-                    It is time to join the <strong>Dark Side</strong>
+                    It is time to join the <strong>Dark Side</strong>!
                 </em>
             </p>
         </section>

@@ -23,26 +23,42 @@ function Navbar({ refList }) {
                     <ThemeToggleButton />
                 </div>
                 {/* Desktop */}
-                <nav className="absolute top-0 z-50 hidden w-full bg-background-color px-12 py-8 text-xl text-text-color shadow-2xl transition-all duration-500 ease-in-out md:flex">
+                <nav className="absolute top-0 z-50 hidden w-full bg-background-color px-12 py-8 text-lg text-text-color shadow-2xl transition-all duration-500 ease-in-out md:flex lg:text-xl">
                     <ul className="mx-auto flex max-w-[1000px] justify-between gap-6 font-black lg:gap-10 lg:px-12">
                         <li className="cursor-pointer">
-                            <button onClick={() => smoothScrollTo(refList[0])}>
+                            <button
+                                className="group relative overflow-hidden"
+                                onClick={() => smoothScrollTo(refList[0])}
+                            >
                                 History
+                                <span className="absolute bottom-0 left-0 h-[1px] w-0  w-full bg-accent-color transition-all duration-300 ease-in-out group-hover:w-full"></span>
                             </button>
                         </li>
                         <li className="cursor-pointer">
-                            <button onClick={() => smoothScrollTo(refList[1])}>
+                            <button
+                                className="group relative  overflow-hidden"
+                                onClick={() => smoothScrollTo(refList[1])}
+                            >
                                 Benefits
+                                <span className="absolute bottom-0 left-0 h-[1px] w-0  w-full bg-accent-color transition-all duration-300 ease-in-out group-hover:w-full"></span>
                             </button>
                         </li>
                         <li className="cursor-pointer">
-                            <button onClick={() => smoothScrollTo(refList[2])}>
+                            <button
+                                className="a group relative overflow-hidden"
+                                onClick={() => smoothScrollTo(refList[2])}
+                            >
                                 Implementing
+                                <span className="absolute bottom-0 left-0 h-[1px] w-0  w-full bg-accent-color transition-all duration-300 ease-in-out group-hover:w-full"></span>
                             </button>
                         </li>
                         <li className="cursor-pointer">
-                            <button onClick={() => smoothScrollTo(refList[3])}>
+                            <button
+                                className="group relative overflow-hidden"
+                                onClick={() => smoothScrollTo(refList[3])}
+                            >
                                 Examples
+                                <span className="absolute bottom-0 left-0 h-[1px] w-0  w-full bg-accent-color transition-all duration-300 ease-in-out group-hover:w-full"></span>
                             </button>
                         </li>
                     </ul>
