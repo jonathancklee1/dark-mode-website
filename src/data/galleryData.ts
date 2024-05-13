@@ -1,6 +1,8 @@
 import vue from '../assets/images/vuejs.jpg'
 import studioMaeterns from '../assets/images/studio-maertens.jpg'
 import genesis from '../assets/images/genesis.jpg'
+import aimpie from '../assets/images/aimpie.jpg'
+import endlesstools from '../assets/images/endlesstools.jpg'
 
 export const galleryData = [
     {
@@ -8,7 +10,7 @@ export const galleryData = [
         link: 'https://vuejs.org/',
         img: {
             src: vue,
-            alt: 'VueJS website',
+            alt: 'VueJS image',
         },
     },
     {
@@ -16,7 +18,7 @@ export const galleryData = [
         link: 'https://studiomaertens.com/',
         img: {
             src: studioMaeterns,
-            alt: 'studioMaeterns',
+            alt: 'studioMaeterns image',
         },
     },
     {
@@ -24,23 +26,23 @@ export const galleryData = [
         link: 'https://www.genesisblockchain.io/',
         img: {
             src: genesis,
-            alt: 'genesis',
+            alt: 'genesis image',
         },
     },
     {
-        siteName: '',
-        link: '',
+        siteName: 'Aimpie',
+        link: 'https://aimpie.design/',
         img: {
-            src: 'https://picsum.photos/1080/960',
-            alt: 'alt image',
+            src: aimpie,
+            alt: 'aimpie image',
         },
     },
     {
-        siteName: '',
-        link: '',
+        siteName: 'Endless Tools',
+        link: 'https://endlesstools.io/',
         img: {
-            src: 'https://picsum.photos/1080/960',
-            alt: 'alt image',
+            src: endlesstools,
+            alt: 'endlesstools image',
         },
     },
 ]

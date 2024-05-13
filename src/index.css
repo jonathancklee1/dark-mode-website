@@ -46,7 +46,7 @@
     }
     main[data-theme='light'] {
         --background-color: #e7e7e7;
-        --text-color: #1e1e1e;
+        --text-color: #202020;
         --card-color: #dedede;
         --accent-color: #1f4d00;
     }

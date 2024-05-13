@@ -20,12 +20,12 @@ function GalleryMedia({ image, index }: GalleryMediaProps) {
                 <img
                     src={image.img.src}
                     alt={image.img.alt}
-                    className="aspect-square h-full w-full object-contain transition-transform duration-500 ease-in-out group-hover:scale-110"
+                    className="aspect-square h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                     loading="lazy"
                 />
             </picture>
-            <div className="absolute inset-0 flex translate-y-full flex-col items-center justify-center gap-4 bg-black p-8 text-white opacity-60 transition-all duration-500 ease-in-out group-hover:translate-y-0">
-                <p className="text-center text-3xl font-bold md:text-5xl">
+            <div className="absolute inset-0 flex translate-y-full flex-col items-center justify-center gap-4 bg-black p-8 text-white opacity-70 transition-all duration-500 ease-in-out group-hover:translate-y-0">
+                <p className="text-center text-3xl font-bold md:text-4xl">
                     {image.siteName}
                 </p>
                 <a
