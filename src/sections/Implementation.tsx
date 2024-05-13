@@ -22,14 +22,30 @@ const Implementation = forwardRef(function Implementation(props, ref) {
             </p>
             <p className="mb-14">
                 Have a project set up using Create React App or Vite with React
-                and Tailwind CSS installed and ready to go. Refer to the React
-                Docs and Tailwind Docs if you are having trouble getting set up.
+                and Tailwind CSS installed and ready to go. Refer to the{' '}
+                <a
+                    href="https://react.dev/learn/installation"
+                    target="_blank"
+                    className="underline hover:text-accent-color"
+                >
+                    React Docs{' '}
+                </a>
+                and{' '}
+                <a
+                    href="https://tailwindcss.com/docs/installation"
+                    target="_blank"
+                    className="underline hover:text-accent-color"
+                >
+                    Tailwind Docs
+                </a>{' '}
+                if you are having trouble getting set up.
             </p>
 
             {/* Step 1 */}
             <div className="mb-14">
                 <h3 className="mb-6 text-xl font-bold">
-                    Step 1: Create a Context for the Theme
+                    <span className="text-accent-color">Step 1:</span> Create a
+                    Context for the Theme
                 </h3>
                 <p className="mb-4">
                     At the highest level component in your application, this is
@@ -52,7 +68,8 @@ export const ThemeContext = createContext(null)
             {/* Step 2 */}
             <div className="mb-14">
                 <h3 className="mb-6 text-xl font-bold">
-                    Step 2: Add a Theme State
+                    <span className="text-accent-color">Step 2:</span> Add a
+                    Theme State
                 </h3>
                 <p className="mb-4">
                     Add a theme state to your App component. For this website,
@@ -69,7 +86,8 @@ export const ThemeContext = createContext(null)
             {/* Step 3 */}
             <div className="mb-14">
                 <h3 className="mb-6 text-xl font-bold">
-                    Step 3: Wrap Context around App with the Theme Provider
+                    <span className="text-accent-color">Step 3:</span> Wrap
+                    Context around App with the Theme Provider
                 </h3>
                 <p className="mb-4">
                     Anywhere in your application, you can now use the useContext
@@ -90,7 +108,8 @@ export const ThemeContext = createContext(null)
             {/* Step 4 */}
             <div className="mb-14">
                 <h3 className="mb-6 text-xl font-bold">
-                    Step 4: Add theme to data-theme attribute in main element
+                    <span className="text-accent-color">Step 4: </span> Add
+                    theme to data-theme attribute in main element
                 </h3>
                 <p className="mb-4">
                     Here is where you can take many routes to apply the theme to
@@ -116,7 +135,8 @@ export const ThemeContext = createContext(null)
             {/* Step 5 */}
             <div className="mb-14">
                 <h3 className="mb-6 text-xl font-bold">
-                    Step 5: Add theme colour variables in the index.css file
+                    <span className="text-accent-color">Step 5:</span> Add theme
+                    colour variables in the index.css file
                 </h3>
                 <p className="mb-4">
                     In the index.css file, declare your chosen colours as
@@ -145,7 +165,8 @@ main[data-theme='light'] {
             {/* Step 6 */}
             <div className="mb-14">
                 <h3 className="mb-6 text-xl font-bold">
-                    Step 6: Use the Theme Context in Components
+                    <span className="text-accent-color">Step 6</span> : Use the
+                    Theme Context in Components
                 </h3>
                 <p className="mb-4">
                     Anywhere in your application, you can now use the useContext

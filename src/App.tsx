@@ -6,6 +6,7 @@ import Gallery from './sections/Gallery'
 import History from './sections/History'
 import Implementation from './sections/Implementation'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 
 export const ThemeContext = createContext(null)
 function App() {
@@ -14,6 +15,7 @@ function App() {
     const benefitsRef = useRef(null)
     const implementationRef = useRef(null)
     const galleryRef = useRef(null)
+    const heroRef = useRef(null)
 
     return (
         <ThemeContext.Provider value={{ theme, setTheme }}>
@@ -26,12 +28,13 @@ function App() {
                         galleryRef,
                     ]}
                 />
-                <HeroBanner />
+                <HeroBanner ref={heroRef} />
                 <History ref={historyRef} />
                 <Benefits ref={benefitsRef} />
                 <Implementation ref={implementationRef} />
                 <Gallery ref={galleryRef} />
                 <Footer />
+                <ScrollToTop topElement={heroRef} />
             </main>
         </ThemeContext.Provider>
     )

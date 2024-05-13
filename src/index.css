@@ -63,7 +63,7 @@
             'Mada' Arial,
             Helvetica,
             sans-serif;
-        @apply bg-background-color text-text-color transition-all duration-500 ease-in-out;
+        @apply relative overflow-hidden bg-background-color text-text-color transition-all duration-500 ease-in-out;
     }
     .content-container {
         @apply mx-auto max-w-[1440px] px-6 py-8 lg:px-12 lg:py-20;

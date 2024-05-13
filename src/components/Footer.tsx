@@ -1,12 +1,13 @@
 import avatar from '../assets/images/profile-picture.jpg'
 function Footer() {
     return (
-        <footer className="mx-auto flex items-center justify-center gap-2 bg-background-color px-12 py-14">
+        <footer className="content-container flex items-center justify-center gap-2 bg-background-color">
             <p className="text-center">
                 A website made by&nbsp;
                 <a
                     href="https://github.com/jonathancklee1"
-                    className="underline hover:text-text-color"
+                    target="_blank"
+                    className="text-text-color underline hover:text-accent-color"
                 >
                     Jonathan Lee
                 </a>
