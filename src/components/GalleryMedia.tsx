@@ -30,6 +30,7 @@ function GalleryMedia({ image, index }: GalleryMediaProps) {
                 </p>
                 <a
                     href={image.link}
+                    target="_blank"
                     className="font-medium underline hover:text-accent-color"
                 >
                     View website

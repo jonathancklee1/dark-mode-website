@@ -3,6 +3,8 @@ import SyntaxHighlighter from 'react-syntax-highlighter'
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 const Implementation = forwardRef(function Implementation(props, ref) {
+    const codeCustomStyles = { padding: '24px', borderRadius: '12px' }
+
     return (
         <section
             ref={ref}
@@ -18,14 +20,14 @@ const Implementation = forwardRef(function Implementation(props, ref) {
                 using the useContext hook in React and Tailwind CSS, with the
                 same techniques used to build this page too!
             </p>
-            <p className="mb-10">
+            <p className="mb-14">
                 Have a project set up using Create React App or Vite with React
                 and Tailwind CSS installed and ready to go. Refer to the React
                 Docs and Tailwind Docs if you are having trouble getting set up.
             </p>
 
             {/* Step 1 */}
-            <div className="mb-10">
+            <div className="mb-14">
                 <h3 className="mb-6 text-xl font-bold">
                     Step 1: Create a Context for the Theme
                 </h3>
@@ -36,11 +38,10 @@ const Implementation = forwardRef(function Implementation(props, ref) {
                     useContext from React and create an instance of the context.
                     Export it so you can reference it in other components.
                 </p>
-                {/* code block */}
                 <SyntaxHighlighter
                     language="jsx"
                     style={a11yDark}
-                    customStyle={{ padding: '24px', borderRadius: '12px' }}
+                    customStyle={codeCustomStyles}
                 >
                     {`import { createContext } from 'react'
 
@@ -49,7 +50,7 @@ export const ThemeContext = createContext(null)
                 </SyntaxHighlighter>
             </div>
             {/* Step 2 */}
-            <div className="mb-10">
+            <div className="mb-14">
                 <h3 className="mb-6 text-xl font-bold">
                     Step 2: Add a Theme State
                 </h3>
@@ -60,13 +61,13 @@ export const ThemeContext = createContext(null)
                 <SyntaxHighlighter
                     language="jsx"
                     style={a11yDark}
-                    customStyle={{ padding: '24px', borderRadius: '12px' }}
+                    customStyle={codeCustomStyles}
                 >
                     {`const [theme, setTheme] = useState('dark')`}
                 </SyntaxHighlighter>
             </div>
             {/* Step 3 */}
-            <div className="mb-10">
+            <div className="mb-14">
                 <h3 className="mb-6 text-xl font-bold">
                     Step 3: Wrap Context around App with the Theme Provider
                 </h3>
@@ -76,11 +77,10 @@ export const ThemeContext = createContext(null)
                     toggle it. Pass in the states you want access to in the
                     child components in the value prop of the ThemeProvider.
                 </p>
-                {/* code block */}
                 <SyntaxHighlighter
                     language="jsx"
                     style={a11yDark}
-                    customStyle={{ padding: '24px', borderRadius: '12px' }}
+                    customStyle={codeCustomStyles}
                 >
                     {`<ThemeContext.Provider value={{ theme, setTheme }}>
     {/* Your Child Components*/}
@@ -88,7 +88,7 @@ export const ThemeContext = createContext(null)
                 </SyntaxHighlighter>
             </div>
             {/* Step 4 */}
-            <div className="mb-10">
+            <div className="mb-14">
                 <h3 className="mb-6 text-xl font-bold">
                     Step 4: Add theme to data-theme attribute in main element
                 </h3>
@@ -100,11 +100,10 @@ export const ThemeContext = createContext(null)
                     using the
                     <code> main[data-theme='dark'] </code> selector.
                 </p>
-                {/* code block */}
                 <SyntaxHighlighter
                     language="jsx"
                     style={a11yDark}
-                    customStyle={{ padding: '24px', borderRadius: '12px' }}
+                    customStyle={codeCustomStyles}
                 >
                     {`<ThemeContext.Provider value={{ theme, setTheme }}>
     <main data-theme={theme}>
@@ -115,7 +114,7 @@ export const ThemeContext = createContext(null)
                 </SyntaxHighlighter>
             </div>
             {/* Step 5 */}
-            <div className="mb-10">
+            <div className="mb-14">
                 <h3 className="mb-6 text-xl font-bold">
                     Step 5: Add theme colour variables in the index.css file
                 </h3>
@@ -123,13 +122,14 @@ export const ThemeContext = createContext(null)
                     In the index.css file, declare your chosen colours as
                     variables using the data-theme selector. If you are using
                     Tailwind, remember to also declare the names in the
-                    tailwind.config.js file
+                    tailwind.config.js file. Now you can use these styles as
+                    normal Tailwind classes e.g.{' '}
+                    <code>bg-background-color</code>.
                 </p>
-                {/* code block */}
                 <SyntaxHighlighter
                     language="css"
                     style={a11yDark}
-                    customStyle={{ padding: '24px', borderRadius: '12px' }}
+                    customStyle={codeCustomStyles}
                 >
                     {`main[data-theme='dark'] {
     --background-color: #your-colour-here;
@@ -143,37 +143,52 @@ main[data-theme='light'] {
                 </SyntaxHighlighter>
             </div>
             {/* Step 6 */}
-            <div className="mb-10">
+            <div className="mb-14">
                 <h3 className="mb-6 text-xl font-bold">
                     Step 6: Use the Theme Context in Components
                 </h3>
                 <p className="mb-4">
                     Anywhere in your application, you can now use the useContext
-                    hook to access the dark mode state and the function to
+                    hook to access the dark mode/theme state and the function to
                     toggle it.
                 </p>
-                {/* code block */}
                 <SyntaxHighlighter
                     language="jsx"
                     style={a11yDark}
-                    customStyle={{ padding: '24px', borderRadius: '12px' }}
+                    customStyle={codeCustomStyles}
                 >
                     {`import { useContext } from 'react';
 import { ThemeContext } from './ThemeContext';
 
 const SomeComponent = () => {
-  const { theme, setTheme } = useContext(ThemeContext);
+    const { theme, setTheme } = useContext(ThemeContext);
 
-  return (
+    return (
     <div className={theme ? 'dark' : 'light'}>
-      <button onClick={setTheme}>Toggle Dark Mode</button>
+        <button onClick={setTheme}>Toggle Dark Mode</button>
       {/* Rest of your component */}
     </div>
-  );
+    ); 
 };
 `}
                 </SyntaxHighlighter>
             </div>
+
+            <p className="mb-6 mt-7 text-center">
+                <em>And there you go!</em>
+                <br />
+                <br />
+                You have now made a working dark mode theme for your project
+                with a few simple steps. Of course, this is one of many ways you
+                can implement dark mode into your project but this should be
+                sufficient for any simple website that you want to elevate the
+                design to the next level!
+                <br />
+                <br />
+                <em>
+                    It is time to join the <strong>Dark Side</strong>
+                </em>
+            </p>
         </section>
     )
 })

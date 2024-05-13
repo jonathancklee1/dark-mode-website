@@ -5,6 +5,7 @@ import Benefits from './sections/Benefits'
 import Gallery from './sections/Gallery'
 import History from './sections/History'
 import Implementation from './sections/Implementation'
+import Footer from './components/Footer'
 
 export const ThemeContext = createContext(null)
 function App() {
@@ -30,6 +31,7 @@ function App() {
                 <Benefits ref={benefitsRef} />
                 <Implementation ref={implementationRef} />
                 <Gallery ref={galleryRef} />
+                <Footer />
             </main>
         </ThemeContext.Provider>
     )
