@@ -4,47 +4,62 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 const HeroBanner = forwardRef(function HeroBanner(props, ref) {
     const { theme } = useContext(ThemeContext)!
+    let topHeadingAnimation: gsap.core.Tween | null = null
+    let bottomHeadingAnimation: gsap.core.Tween | null = null
+
     useGSAP(() => {
-        gsap.to('#top-heading', {
+        topHeadingAnimation = gsap.to('#top-heading', {
             translateY: -155,
             ease: 'ease',
             duration: 1.5,
             delay: 0.7,
             opacity: 1,
         })
-        gsap.to('#bottom-heading', {
+        bottomHeadingAnimation = gsap.to('#bottom-heading', {
             translateY: 155,
             ease: 'ease',
             duration: 1.5,
             delay: 0.7,
             opacity: 1,
         })
+        topHeadingAnimation.play()
+        bottomHeadingAnimation.play()
     })
-
     function headingMouseEnter() {
+        if (
+            topHeadingAnimation?.isActive() ||
+            bottomHeadingAnimation?.isActive()
+        )
+            return
         gsap.to('#top-heading', {
             translateY: 0,
-            ease: 'power2.inOut',
+            ease: 'ease',
             duration: 0.7,
             opacity: 0,
         })
         gsap.to('#bottom-heading', {
             translateY: 0,
-            ease: 'power2.inOut',
+            ease: 'ease',
             duration: 0.7,
             opacity: 0,
         })
     }
+
     function headingMouseExit() {
+        if (
+            topHeadingAnimation?.isActive() ||
+            bottomHeadingAnimation?.isActive()
+        )
+            return
         gsap.to('#top-heading', {
             translateY: -155,
-            ease: 'power2.inOut',
+            ease: 'ease',
             duration: 0.7,
             opacity: 1,
         })
         gsap.to('#bottom-heading', {
             translateY: 155,
-            ease: 'power2.inOut',
+            ease: 'ease',
             duration: 0.7,
             opacity: 1,
         })
