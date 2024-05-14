@@ -11,7 +11,6 @@ const History = forwardRef(function History(props, ref) {
                 trigger: '.timeline',
                 start: 'top 20%',
                 end: 'bottom 20%',
-                markers: true,
                 toggleActions: 'play none none reverse',
                 scrub: true,
             },

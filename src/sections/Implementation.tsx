@@ -1,10 +1,28 @@
-import { forwardRef } from 'react'
+import { forwardRef, useRef } from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 const Implementation = forwardRef(function Implementation(props, ref) {
+    const stepRef = useRef(null)
     const codeCustomStyles = { padding: '24px', borderRadius: '12px' }
+    const steps = gsap.utils.selector(ref)
 
+    useGSAP(() => {
+        steps('.step').forEach((step) => {
+            gsap.from(step, {
+                duration: 0.75,
+                translateY: 70,
+                opacity: 0,
+                ease: 'ease',
+                scrollTrigger: {
+                    trigger: step,
+                    start: 'top 90%',
+                },
+            })
+        })
+    })
     return (
         <section
             ref={ref}
@@ -42,7 +60,7 @@ const Implementation = forwardRef(function Implementation(props, ref) {
             </p>
 
             {/* Step 1 */}
-            <div className="mb-14">
+            <div ref={stepRef} className="step mb-14">
                 <h3 className="mb-6 text-xl font-bold">
                     <span className="text-accent-color">Step 1:</span> Create a
                     Context for the Theme
@@ -66,7 +84,7 @@ export const ThemeContext = createContext(null)
                 </SyntaxHighlighter>
             </div>
             {/* Step 2 */}
-            <div className="mb-14">
+            <div ref={stepRef} className="step mb-14">
                 <h3 className="mb-6 text-xl font-bold">
                     <span className="text-accent-color">Step 2:</span> Add a
                     Theme State
@@ -84,7 +102,7 @@ export const ThemeContext = createContext(null)
                 </SyntaxHighlighter>
             </div>
             {/* Step 3 */}
-            <div className="mb-14">
+            <div ref={stepRef} className="step mb-14">
                 <h3 className="mb-6 text-xl font-bold">
                     <span className="text-accent-color">Step 3:</span> Wrap
                     Context around App with the Theme Provider
@@ -106,7 +124,7 @@ export const ThemeContext = createContext(null)
                 </SyntaxHighlighter>
             </div>
             {/* Step 4 */}
-            <div className="mb-14">
+            <div ref={stepRef} className="step mb-14">
                 <h3 className="mb-6 text-xl font-bold">
                     <span className="text-accent-color">Step 4: </span> Add
                     theme to data-theme attribute in main element
@@ -133,7 +151,7 @@ export const ThemeContext = createContext(null)
                 </SyntaxHighlighter>
             </div>
             {/* Step 5 */}
-            <div className="mb-14">
+            <div ref={stepRef} className="step mb-14">
                 <h3 className="mb-6 text-xl font-bold">
                     <span className="text-accent-color">Step 5:</span> Add theme
                     colour variables in the index.css file
@@ -163,7 +181,7 @@ main[data-theme='light'] {
                 </SyntaxHighlighter>
             </div>
             {/* Step 6 */}
-            <div className="mb-14">
+            <div ref={stepRef} className="step mb-14">
                 <h3 className="mb-6 text-xl font-bold">
                     <span className="text-accent-color">Step 6</span> : Use the
                     Theme Context in Components
