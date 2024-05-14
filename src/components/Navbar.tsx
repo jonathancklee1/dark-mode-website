@@ -31,7 +31,7 @@ function Navbar({ refList }) {
                                 onClick={() => smoothScrollTo(refList[0])}
                             >
                                 History
-                                <span className="absolute bottom-0 left-0 h-[1px] w-0  w-full bg-accent-color transition-all duration-300 ease-in-out group-hover:w-full"></span>
+                                <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-accent-color transition-all duration-300 ease-in-out group-hover:w-full"></span>
                             </button>
                         </li>
                         <li className="cursor-pointer">
@@ -40,7 +40,7 @@ function Navbar({ refList }) {
                                 onClick={() => smoothScrollTo(refList[1])}
                             >
                                 Benefits
-                                <span className="absolute bottom-0 left-0 h-[1px] w-0  w-full bg-accent-color transition-all duration-300 ease-in-out group-hover:w-full"></span>
+                                <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-accent-color transition-all duration-300 ease-in-out group-hover:w-full"></span>
                             </button>
                         </li>
                         <li className="cursor-pointer">
@@ -49,7 +49,7 @@ function Navbar({ refList }) {
                                 onClick={() => smoothScrollTo(refList[2])}
                             >
                                 Implementing
-                                <span className="absolute bottom-0 left-0 h-[1px] w-0  w-full bg-accent-color transition-all duration-300 ease-in-out group-hover:w-full"></span>
+                                <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-accent-color transition-all duration-300 ease-in-out group-hover:w-full"></span>
                             </button>
                         </li>
                         <li className="cursor-pointer">
@@ -58,7 +58,7 @@ function Navbar({ refList }) {
                                 onClick={() => smoothScrollTo(refList[3])}
                             >
                                 Examples
-                                <span className="absolute bottom-0 left-0 h-[1px] w-0  w-full bg-accent-color transition-all duration-300 ease-in-out group-hover:w-full"></span>
+                                <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-accent-color transition-all duration-300 ease-in-out group-hover:w-full"></span>
                             </button>
                         </li>
                     </ul>
