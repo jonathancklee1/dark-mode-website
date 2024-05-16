@@ -2,7 +2,10 @@ import BenefitCard from '../components/BenefitCard'
 import { forwardRef } from 'react'
 import { benefitsData } from '../data/benefitsData'
 
-const Benefits = forwardRef<HTMLElement, object>(function Benefits(props, ref) {
+const Benefits = forwardRef<HTMLElement, object>(function Benefits(
+    _: unknown,
+    ref
+) {
     return (
         <section
             ref={ref}

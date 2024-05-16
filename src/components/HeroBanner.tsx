@@ -3,7 +3,7 @@ import { ThemeContext } from '../App'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 const HeroBanner = forwardRef(function HeroBanner(
-    props,
+    _: unknown,
     ref: React.Ref<HTMLDivElement>
 ) {
     const { theme } = useContext(ThemeContext)!
