@@ -1,5 +1,8 @@
 interface DropdownMenuProps {
     isOpen: boolean
+    setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
+    refList: React.RefObject<HTMLDivElement>[]
+    smoothScrollTo: (element: React.RefObject<HTMLDivElement>) => void
 }
 
 function DropdownMenu({
@@ -50,7 +53,7 @@ function DropdownMenu({
                             setIsOpen(false)
                         }}
                     >
-                        Examples
+                        Gallery
                     </button>
                 </li>
             </ul>

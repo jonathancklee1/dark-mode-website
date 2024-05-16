@@ -2,7 +2,10 @@ import { forwardRef, useContext } from 'react'
 import { ThemeContext } from '../App'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-const HeroBanner = forwardRef(function HeroBanner(props, ref) {
+const HeroBanner = forwardRef(function HeroBanner(
+    props,
+    ref: React.Ref<HTMLDivElement>
+) {
     const { theme } = useContext(ThemeContext)!
     let topHeadingAnimation: gsap.core.Tween | null = null
     let bottomHeadingAnimation: gsap.core.Tween | null = null

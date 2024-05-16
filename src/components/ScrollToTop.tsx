@@ -1,6 +1,10 @@
-import ArrowUp from '../assets/arrow-up-solid.svg?react'
-function ScrollToTop({ topElement }) {
-    function smoothScrollTo(target) {
+import ArrowUp from './svg/ArrowUp'
+interface ScrollToTopProps {
+    topElement: React.RefObject<HTMLDivElement>
+}
+
+function ScrollToTop({ topElement }: ScrollToTopProps) {
+    function smoothScrollTo(target: React.RefObject<HTMLDivElement>) {
         if (target) {
             target.current?.scrollIntoView({ behavior: 'smooth' })
         }

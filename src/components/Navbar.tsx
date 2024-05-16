@@ -2,9 +2,13 @@ import { useState } from 'react'
 import DropdownMenu from './DropdownMenu'
 import Hamburger from './svg/Hamburger'
 import ThemeToggleButton from './ThemeToggleButton'
-function Navbar({ refList }) {
+interface NavbarProps {
+    refList: React.RefObject<HTMLDivElement>[]
+}
+
+function Navbar({ refList }: NavbarProps) {
     const [isOpen, setIsOpen] = useState(false)
-    function smoothScrollTo(target) {
+    function smoothScrollTo(target: React.RefObject<HTMLDivElement>) {
         if (target) {
             target.current?.scrollIntoView({ behavior: 'smooth' })
         }
@@ -48,7 +52,7 @@ function Navbar({ refList }) {
                                 className="a group relative overflow-hidden"
                                 onClick={() => smoothScrollTo(refList[2])}
                             >
-                                Implementing
+                                Implementation
                                 <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-accent-color transition-all duration-300 ease-in-out group-hover:w-full"></span>
                             </button>
                         </li>
@@ -57,7 +61,7 @@ function Navbar({ refList }) {
                                 className="group relative overflow-hidden"
                                 onClick={() => smoothScrollTo(refList[3])}
                             >
-                                Examples
+                                Gallery
                                 <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-accent-color transition-all duration-300 ease-in-out group-hover:w-full"></span>
                             </button>
                         </li>

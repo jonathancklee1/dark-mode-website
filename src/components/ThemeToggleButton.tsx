@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
-import Moon from '../assets/moon.svg?react'
-import Sun from '../assets/sun-solid.svg?react'
+import { useContext } from 'react'
+import Moon from './svg/Moon'
+import Sun from './svg/Sun'
 import { ThemeContext } from '../App'
 
 function ThemeToggleButton() {

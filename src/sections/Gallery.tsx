@@ -3,7 +3,8 @@ import { forwardRef } from 'react'
 import { galleryData } from '../data/galleryData'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-const Gallery = forwardRef(function Gallery(props, ref) {
+
+const Gallery = forwardRef<HTMLElement, object>(function Gallery(props, ref) {
     useGSAP(() => {
         gsap.from('.gallery', {
             duration: 0.75,

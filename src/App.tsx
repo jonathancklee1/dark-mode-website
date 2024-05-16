@@ -8,7 +8,10 @@ import Implementation from './sections/Implementation'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 
-export const ThemeContext = createContext(null)
+export const ThemeContext = createContext<{
+    theme: string
+    setTheme: React.Dispatch<React.SetStateAction<string>>
+}>({ theme: 'dark', setTheme: () => {} })
 function App() {
     const [theme, setTheme] = useState('dark')
     const historyRef = useRef(null)

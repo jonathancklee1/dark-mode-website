@@ -1,9 +1,9 @@
-import ArrowEyes from '../assets/arrows-to-eye-solid.svg?react'
-import Battery from '../assets/battery-three-quarters-solid.svg?react'
-import Bed from '../assets/bed-solid.svg?react'
-import Eye from '../assets/eye-regular.svg?react'
-import Palette from '../assets/palette-solid.svg?react'
-import Access from '../assets/universal-access-solid.svg?react'
+import ArrowEye from './svg/ArrowEye'
+import Battery from './svg/Battery'
+import Bed from './svg/Bed'
+import Eye from './svg/Eye'
+import Palette from './svg/Palette'
+import Access from './svg/Access'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
@@ -43,7 +43,7 @@ function BenefitCard({ data }: BenefitCardProps) {
             case 'access':
                 return <Access />
             case 'arrow-eye':
-                return <ArrowEyes />
+                return <ArrowEye />
             default:
                 return <Eye />
         }

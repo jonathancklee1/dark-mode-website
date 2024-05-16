@@ -3,7 +3,8 @@ import HistoryCard from '../components/HistoryCard'
 import { historyData } from '../data/historyData'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-const History = forwardRef(function History(props, ref) {
+
+const History = forwardRef<HTMLElement, object>(function History(props, ref) {
     useGSAP(() => {
         gsap.to('.timeline-circle', {
             top: 'calc(100% - 30px)',
