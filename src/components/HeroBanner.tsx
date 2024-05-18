@@ -1,4 +1,4 @@
-import { forwardRef, useContext } from 'react'
+import { forwardRef, useContext, useState } from 'react'
 import { ThemeContext } from '../App'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
@@ -8,6 +8,7 @@ const HeroBanner = forwardRef(function HeroBanner(
 ) {
     const { theme } = useContext(ThemeContext)!
     let topHeadingAnimation: gsap.core.Tween | null = null
+    const [merged, setMerged] = useState(false)
     let bottomHeadingAnimation: gsap.core.Tween | null = null
 
     useGSAP(() => {
@@ -28,7 +29,7 @@ const HeroBanner = forwardRef(function HeroBanner(
         topHeadingAnimation.play()
         bottomHeadingAnimation.play()
     })
-    function headingMouseEnter() {
+    function mergeIn() {
         if (
             topHeadingAnimation?.isActive() ||
             bottomHeadingAnimation?.isActive()
@@ -46,9 +47,10 @@ const HeroBanner = forwardRef(function HeroBanner(
             duration: 0.7,
             opacity: 0,
         })
+        setMerged(true)
     }
 
-    function headingMouseExit() {
+    function mergeOut() {
         if (
             topHeadingAnimation?.isActive() ||
             bottomHeadingAnimation?.isActive()
@@ -66,6 +68,7 @@ const HeroBanner = forwardRef(function HeroBanner(
             duration: 0.7,
             opacity: 1,
         })
+        setMerged(false)
     }
     return (
         <div
@@ -80,8 +83,15 @@ const HeroBanner = forwardRef(function HeroBanner(
                     {theme === 'light' ? '!Dark Mode' : 'Dark Mode'}
                 </p>
                 <h1
-                    onMouseEnter={headingMouseEnter}
-                    onMouseLeave={headingMouseExit}
+                    onMouseEnter={mergeIn}
+                    onMouseLeave={mergeOut}
+                    onClick={() => {
+                        if (merged) {
+                            mergeOut()
+                        } else {
+                            mergeIn()
+                        }
+                    }}
                     className="z-10 cursor-pointer text-center text-7xl font-black uppercase md:text-8xl xl:text-9xl"
                 >
                     {theme === 'light' ? '!Dark Mode' : 'Dark Mode'}

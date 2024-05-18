@@ -49,8 +49,8 @@ const Implementation = forwardRef<HTMLElement, object>(function Implementation(
                     target="_blank"
                     className="underline hover:text-accent-color"
                 >
-                    React Docs{' '}
-                </a>
+                    React Docs
+                </a>{' '}
                 and{' '}
                 <a
                     href="https://tailwindcss.com/docs/installation"
@@ -165,7 +165,9 @@ export const ThemeContext = createContext(null)
                     are using Tailwind, remember to also declare the names in
                     the <code>tailwind.config.js </code>
                     file. Now you can use these styles as normal Tailwind
-                    classes e.g. <code>bg-background-color</code>.
+                    classes e.g. <code>bg-background-color</code>. This way you
+                    can use the same colour tokens and will switch accordingly
+                    to the theme selected
                 </p>
                 <SyntaxHighlighter
                     language="css"
